@@ -1,9 +1,9 @@
-/roboadvice/.settings
-/roboadvice/src
-/roboadvice/.project
-/roboadvice/roboadvice-web/.project
-/roboadvice/roboadvice-web/.settings
-/roboadvice/roboadvice-web/target
-/roboadvice/roboadvice-web/.classpath
-/roboadvice/roboadvice-web/.gitignore
+robo-advice/roboadvice/.settings
+robo-advice/roboadvice/src
+robo-advice/roboadvice/.project
+robo-advice/roboadvice/roboadvice-web/.project
+robo-advice/roboadvice/roboadvice-web/.settings
+robo-advice/roboadvice/roboadvice-web/target
+robo-advice/roboadvice/roboadvice-web/.classpath
+robo-advice/roboadvice/roboadvice-web/.gitignore
 .DS_Store
