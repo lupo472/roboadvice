@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 
 import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
+import { CardAssetClassComponent } from './card-asset-class/card-asset-class.component';
 
 @NgModule({
   imports: [
@@ -14,6 +15,6 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
     DropdownModule,
     CommonModule
   ],
-  declarations: [ DashboardComponent ]
+  declarations: [ DashboardComponent, CardAssetClassComponent ]
 })
 export class DashboardModule { }

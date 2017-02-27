@@ -14,6 +14,11 @@ export class DashboardComponent implements OnInit {
   public brandWarning:string =  '#f8cb00';
   public brandDanger:string =   '#f86c6b';
   
+  public bonds:number = 1000;
+  public forex:number = 2000;
+  public stocks:number = 3000;
+  public commodities:number = 4000;
+  
   public prova:string = '';
           
   //CLICK PROVA
@@ -48,7 +53,7 @@ export class DashboardComponent implements OnInit {
   public chartHovered(e:any):void {
     console.log(e);
   }
-
+  
   // lineChart1
   public lineChart1Data:Array<any> = [
     {
