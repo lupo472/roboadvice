@@ -16,10 +16,10 @@
 					<p>Members online</p>
 				</div>
 				<div class="chart-wrapper px-1" style="height: 70px;">
-					<canvas baseChart class="chart" [datasets]="lineChart1Data"
-						[labels]="lineChart1Labels" [options]="lineChart1Options"
-						[colors]="lineChart1Colours" [legend]="lineChart1Legend"
-						[chartType]="lineChart1Type" (chartHover)="chartHovered($event)"
+					<canvas baseChart class="chart" [datasets]="lineChartData"
+						[labels]="lineChartLabels" [options]="lineChartOptions"
+						[colors]="lineChartColours" [legend]="lineChartLegend"
+						[chartType]="lineChartType" (chartHover)="chartHovered($event)"
 						(chartClick)="chartClicked($event)"></canvas>
 				</div>
 			</div>

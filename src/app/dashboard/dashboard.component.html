@@ -3,22 +3,46 @@
 
 		<!-- BONDS -->
 		<div class="col-sm-6 col-lg-3">
-			<app-card-asset-class [value]="bonds"> </app-card-asset-class>
+			<app-card-asset-class [value]="bonds"
+			[lineChartData]="lineChart3Data"
+				[lineChartLabels]="lineChart3Labels"
+				[lineChartOptions]="lineChart3Options"
+				[lineChartColours]="lineChart3Colours"
+				[lineChartLegend]="lineChart3Legend"
+				[lineChartType]="lineChart3Type"> </app-card-asset-class>
 		</div>
 
 		<!-- FOREX -->
 		<div class="col-sm-6 col-lg-3">
-			<app-card-asset-class [value]="forex"> </app-card-asset-class>
+			<app-card-asset-class [value]="forex"
+			[lineChartData]="lineChart1Data"
+				[lineChartLabels]="lineChart1Labels"
+				[lineChartOptions]="lineChart1Options"
+				[lineChartColours]="lineChart1Colours"
+				[lineChartLegend]="lineChart1Legend"
+				[lineChartType]="lineChart1Type"> </app-card-asset-class>
 		</div>
 
 		<!-- STOCKS -->
 		<div class="col-sm-6 col-lg-3">
-			<app-card-asset-class [value]="stocks"> </app-card-asset-class>
+			<app-card-asset-class [value]="stocks"
+			[lineChartData]="lineChart2Data"
+				[lineChartLabels]="lineChart2Labels"
+				[lineChartOptions]="lineChart2Options"
+				[lineChartColours]="lineChart2Colours"
+				[lineChartLegend]="lineChart2Legend"
+				[lineChartType]="lineChart2Type"> </app-card-asset-class>
 		</div>
 
 		<!-- COMMODITIES -->
 		<div class="col-sm-6 col-lg-3">
-			<app-card-asset-class [value]="commodities"> </app-card-asset-class>
+			<app-card-asset-class [value]="commodities"
+				[lineChartData]="lineChart1Data"
+				[lineChartLabels]="lineChart1Labels"
+				[lineChartOptions]="lineChart1Options"
+				[lineChartColours]="lineChart1Colours"
+				[lineChartLegend]="lineChart1Legend"
+				[lineChartType]="lineChart1Type"> </app-card-asset-class>
 		</div>
 
 	</div>
