@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	 http://www.springframework.org/schema/beans/spring-beans.xsd
+	 http://www.springframework.org/schema/security
+	 http://www.springframework.org/schema/security/spring-security.xsd">
+
+	<global-method-security secured-annotations="enabled" />
+
+	<!-- static resources not internet -->
+	<!-- <http pattern="/resources/**" security="none" /> -->
+
+	<http auto-config="true" pattern="/**" use-expressions="true" entry-point-ref="internetEntryPoint" authentication-manager-ref="authenticationManager">
+		<intercept-url pattern="/access/**" access="hasAnyRole('ROLE_USER')"  />
+		<intercept-url pattern="/**" access="permitAll"  />
+		<form-login login-page="/#/"
+		login-processing-url="/loginUser"
+		username-parameter="username"
+		password-parameter="password"
+		authentication-failure-url="/"
+		authentication-success-handler-ref="internetAuthenticationSuccessHandler"
+		authentication-failure-handler-ref="internetAuthenticationFailureHandler"/>
+		<logout logout-url="/logout" invalidate-session="true" logout-success-url="/login?logout"/>
+		<session-management session-authentication-error-url="/jsp/errorpages/InvalidSession.jsp"/>
+		<csrf disabled="true" />
+	</http>
+
+	<authentication-manager alias="authenticationManager" >
+		<authentication-provider ref="internetAuthenticationProvider"  />
+	</authentication-manager>
+
+	<beans:bean id="internetAuthenticationProvider" class="it.uiip.digitalgarage.roboadvice.auth.InternetAuthenticationProvider" />
+
+	<beans:bean id="internetAuthenticationSuccessHandler" class="it.uiip.digitalgarage.roboadvice.auth.InternetAuthenticationSuccessHandler" />
+
+	<beans:bean id="internetAuthenticationFailureHandler" class="it.uiip.digitalgarage.roboadvice.auth.InternetAuthenticationFailureHandler" />
+
+	<beans:bean id="internetEntryPoint" class="it.uiip.digitalgarage.roboadvice.auth.InternetUnauthorizedEntryPoint"/>
+
+
+
+</beans:beans>

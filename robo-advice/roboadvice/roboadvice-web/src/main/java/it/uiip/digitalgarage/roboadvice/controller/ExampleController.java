@@ -30,4 +30,10 @@ public class ExampleController {
 		logger.info("rest");
 		return new GenericResponse(true, "ciao Rest");
 	}
+	
+	@RequestMapping(value="/access/rest")
+	public GenericResponse access(){
+		logger.info("rest");
+		return new GenericResponse(true, "ciao Rest");
+	}
 }
