@@ -7,13 +7,12 @@ public class FinancialData {
     private Long id;
     private Long idAsset;
     private BigDecimal value;
-    private String timestamp;
+    private String date;
 
-    public FinancialData(Long id, Long idAsset, BigDecimal value, String timestamp) {
-        this.id = id;
+    public FinancialData(Long idAsset, BigDecimal value, String date) {
         this.idAsset = idAsset;
         this.value = value;
-        this.timestamp = timestamp;
+        this.date = date;
     }
 
     public Long getId() {
@@ -40,11 +39,11 @@ public class FinancialData {
         this.value = value;
     }
 
-    public String getTimestamp() {
-        return timestamp;
+    public String getDate() {
+        return date;
     }
 
-    public void setTimestamp(String timestamp) {
-        this.timestamp = timestamp;
+    public void setDate(String date) {
+        this.date = date;
     }
 }
