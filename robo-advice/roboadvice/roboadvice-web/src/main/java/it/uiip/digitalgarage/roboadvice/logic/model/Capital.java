@@ -1,5 +1,7 @@
 package it.uiip.digitalgarage.roboadvice.logic.model;
 
+import java.math.BigDecimal;
+
 /**
  * Created by Luca on 28/02/2017.
  */
@@ -7,10 +9,10 @@ public class Capital {
 
     private Long id;
     private Long idUser;
-    private double amount;
+    private BigDecimal amount;
     private String date;
 
-    public Capital(Long id, Long idUser, double amount, String date) {
+    public Capital(Long id, Long idUser, BigDecimal amount, String date) {
         this.id = id;
         this.idUser = idUser;
         this.amount = amount;
@@ -33,11 +35,12 @@ public class Capital {
         this.idUser = idUser;
     }
 
-    public double getAmount() {
+
+    public BigDecimal getAmount() {
         return amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(BigDecimal amount) {
         this.amount = amount;
     }
 

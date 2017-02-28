@@ -1,5 +1,7 @@
 package it.uiip.digitalgarage.roboadvice.logic.model;
 
+import java.math.BigDecimal;
+
 /**
  * Created by Luca on 28/02/2017.
  */
@@ -7,14 +9,14 @@ public class CustomStrategy {
 
     private Long id;
     private Long idUser;
-    private double bonds;
-    private double stocks;
-    private double forex;
-    private double commodities;
+    private BigDecimal bonds;
+    private BigDecimal stocks;
+    private BigDecimal forex;
+    private BigDecimal commodities;
     private boolean active;
     private String timestamp;
 
-    public CustomStrategy(Long id,Long idUser, double bonds, double stocks, double forex, double commodities, boolean active, String timestamp) {
+    public CustomStrategy(Long id,Long idUser, BigDecimal bonds, BigDecimal stocks, BigDecimal forex, BigDecimal commodities, boolean active, String timestamp) {
         this.idUser = idUser;
         this.bonds = bonds;
         this.stocks = stocks;
@@ -40,35 +42,35 @@ public class CustomStrategy {
         this.idUser = idUser;
     }
 
-    public double getBonds() {
+    public BigDecimal getBonds() {
         return bonds;
     }
 
-    public void setBonds(double bonds) {
+    public void setBonds(BigDecimal bonds) {
         this.bonds = bonds;
     }
 
-    public double getStocks() {
+    public BigDecimal getStocks() {
         return stocks;
     }
 
-    public void setStocks(double stocks) {
+    public void setStocks(BigDecimal stocks) {
         this.stocks = stocks;
     }
 
-    public double getForex() {
+    public BigDecimal getForex() {
         return forex;
     }
 
-    public void setForex(double forex) {
+    public void setForex(BigDecimal forex) {
         this.forex = forex;
     }
 
-    public double getCommodities() {
+    public BigDecimal getCommodities() {
         return commodities;
     }
 
-    public void setCommodities(double commodities) {
+    public void setCommodities(BigDecimal commodities) {
         this.commodities = commodities;
     }
 

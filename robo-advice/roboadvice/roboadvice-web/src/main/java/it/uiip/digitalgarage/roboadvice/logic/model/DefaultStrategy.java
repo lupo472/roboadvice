@@ -1,17 +1,19 @@
 package it.uiip.digitalgarage.roboadvice.logic.model;
 
+import java.math.BigDecimal;
+
 /**
  * Created by Luca on 28/02/2017.
  */
 public class DefaultStrategy {
     private Long id;
     private String name;
-    private double bonds;
-    private double stoks;
-    private double forex;
-    private double commodities;
+    private BigDecimal bonds;
+    private BigDecimal stoks;
+    private BigDecimal forex;
+    private BigDecimal commodities;
 
-    public DefaultStrategy(Long id, String name, double bonds, double stoks, double forex, double commodities) {
+    public DefaultStrategy(Long id, String name, BigDecimal bonds, BigDecimal stoks, BigDecimal forex, BigDecimal commodities) {
         this.id = id;
         this.name = name;
         this.bonds = bonds;
@@ -36,35 +38,35 @@ public class DefaultStrategy {
         this.name = name;
     }
 
-    public double getBonds() {
+    public BigDecimal getBonds() {
         return bonds;
     }
 
-    public void setBonds(double bonds) {
+    public void setBonds(BigDecimal bonds) {
         this.bonds = bonds;
     }
 
-    public double getStoks() {
+    public BigDecimal getStoks() {
         return stoks;
     }
 
-    public void setStoks(double stoks) {
+    public void setStoks(BigDecimal stoks) {
         this.stoks = stoks;
     }
 
-    public double getForex() {
+    public BigDecimal getForex() {
         return forex;
     }
 
-    public void setForex(double forex) {
+    public void setForex(BigDecimal forex) {
         this.forex = forex;
     }
 
-    public double getCommodities() {
+    public BigDecimal getCommodities() {
         return commodities;
     }
 
-    public void setCommodities(double commodities) {
+    public void setCommodities(BigDecimal commodities) {
         this.commodities = commodities;
     }
 }
