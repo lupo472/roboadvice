@@ -10,6 +10,7 @@ export class DashboardComponent implements OnInit {
 
   constructor(private service:UserService)
   {
+  console.log("++dashboard component");
   this.service.loginUser().subscribe(
     (res)=>{
     console.log(JSON.stringify(res));
