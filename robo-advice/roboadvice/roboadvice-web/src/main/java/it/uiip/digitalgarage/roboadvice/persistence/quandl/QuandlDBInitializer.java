@@ -20,7 +20,7 @@ public class QuandlDBInitializer {
 	
 	public void getData(Asset asset) {
 		QuandlSession session = QuandlSession.create();
-
+		
 		TabularResult tabularResult = session.getDataSet(
 				DataSetRequest.Builder.of(asset.getDataSource())
 				.withStartDate(LocalDate.of(2011, 01, 01))
