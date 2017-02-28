@@ -1,26 +1,34 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from '../services/user.service';
 
 @Component({
-  templateUrl: 'dashboard.component.html'
+  templateUrl: 'dashboard.component.html',
+  providers:[UserService]
 })
 export class DashboardComponent implements OnInit {
 
-  constructor( ) { }
+  constructor(private service:UserService)
+  {
+  this.service.loginUser().subscribe(
+    (res)=>{
+    console.log(JSON.stringify(res));
+  });
 
+  }
   public brandPrimary:string =  '#20a8d8';
   public brandSuccess:string =  '#4dbd74';
   public brandInfo:string =   '#63c2de';
   public brandWarning:string =  '#f8cb00';
   public brandDanger:string =   '#f86c6b';
-  
+
   public bonds:number = 1000;
   public forex:number = 2000;
   public stocks:number = 3000;
   public commodities:number = 4000;
-  
+
   public prova:string = '';
-          
+
   //CLICK PROVA
   public clickme(){
     this.prova = 'ok';
@@ -53,7 +61,7 @@ export class DashboardComponent implements OnInit {
   public chartHovered(e:any):void {
     console.log(e);
   }
-  
+
   // lineChart1
   public lineChart1Data:Array<any> = [
     {
@@ -324,7 +332,7 @@ export class DashboardComponent implements OnInit {
   public mainChartLegend:boolean = false;
   public mainChartType:string = 'line';
 
-  
+
 
   // sparkline charts
 
