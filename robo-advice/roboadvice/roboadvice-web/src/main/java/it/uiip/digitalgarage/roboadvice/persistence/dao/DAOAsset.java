@@ -27,11 +27,11 @@ public class DAOAsset implements IDAOAsset {
 			connection = DataSource.getConnection();
 			preparedStatement = connection.prepareStatement(GET_ASSETS);
 			resultSet = preparedStatement.executeQuery();
-			System.out.println("aa");
 			while(resultSet.next()) {
 				Long id = resultSet.getLong("id");
-				this.getAssets().add(new Asset(id));
-				System.out.println("Ciao");
+				String dataSource = resultSet.getString("data_source");
+				int remarksIndex = resultSet.getInt("remarks_index");
+				assets.add(new Asset(id, dataSource, remarksIndex));
 			}
 			return assets;
 		} catch(SQLException e) {
@@ -43,16 +43,16 @@ public class DAOAsset implements IDAOAsset {
 		}
 	}
 	
-	public static void main(String[] args) {
-		try {
-			List<Asset> assets = new DAOAsset().getAssets();
-			
+//	public static void main(String[] args) {
+//		try {
+//			List<Asset> assets = new DAOAsset().getAssets();
+//			
 //			for(Asset asset: assets) {
-//				System.out.println("id: " + asset.getId());
+//				
 //			}
-		} catch (DAOException e) {
-			e.getLocalizedMessage();
-		}
-	}
+//		} catch (DAOException e) {
+//			e.getLocalizedMessage();
+//		}
+//	}
 
 }
