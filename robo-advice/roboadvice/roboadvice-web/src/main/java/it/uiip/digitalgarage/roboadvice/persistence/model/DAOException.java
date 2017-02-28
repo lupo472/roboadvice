@@ -1,4 +1,4 @@
-package it.uiip.digitalgarage.roboadvice.persistence;
+package it.uiip.digitalgarage.roboadvice.persistence.model;
 
 /**
  * 
