@@ -1,9 +1,13 @@
 package it.uiip.digitalgarage.roboadvice.logic.model;
 
+import java.math.BigDecimal;
+
 public class Asset {
 	
 	private Long id;
+	private Long idAssetClass;
 	private String dataSource;
+	private BigDecimal percentage;
 	private int remarksIndex;
 	
 	public Asset(Long id, String dataSource, int remarksIndex) {
@@ -34,6 +38,22 @@ public class Asset {
 
 	public void setRemarksIndex(int remarksIndex) {
 		this.remarksIndex = remarksIndex;
+	}
+
+	public Long getIdAssetClass() {
+		return idAssetClass;
+	}
+
+	public void setIdAssetClass(Long idAssetClass) {
+		this.idAssetClass = idAssetClass;
+	}
+
+	public BigDecimal getPercentage() {
+		return percentage;
+	}
+
+	public void setPercentage(BigDecimal percentage) {
+		this.percentage = percentage;
 	}
 
 }

@@ -2,9 +2,6 @@ package it.uiip.digitalgarage.roboadvice.logic.model;
 
 import java.math.BigDecimal;
 
-/**
- * Created by Luca on 28/02/2017.
- */
 public class CustomStrategy {
 
     private Long id;
@@ -15,16 +12,6 @@ public class CustomStrategy {
     private BigDecimal commodities;
     private boolean active;
     private String timestamp;
-
-    public CustomStrategy(Long id,Long idUser, BigDecimal bonds, BigDecimal stocks, BigDecimal forex, BigDecimal commodities, boolean active, String timestamp) {
-        this.idUser = idUser;
-        this.bonds = bonds;
-        this.stocks = stocks;
-        this.forex = forex;
-        this.commodities = commodities;
-        this.active = active;
-        this.timestamp = timestamp;
-    }
 
     public Long getId() {
         return id;
