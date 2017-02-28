@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
-import it.uiip.digitalgarage.roboadvice.model.User;
+import it.uiip.digitalgarage.roboadvice.logic.model.User;
 
 public class InternetAuthenticationSuccessHandler implements AuthenticationSuccessHandler{
 	

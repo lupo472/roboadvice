@@ -13,7 +13,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Component;
 
 import it.uiip.digitalgarage.roboadvice.auth.exception.UsernamePasswordException;
-import it.uiip.digitalgarage.roboadvice.model.User;
+import it.uiip.digitalgarage.roboadvice.logic.model.User;
 import it.uiip.digitalgarage.roboadvice.persistence.idao.IDAOUser;
 import it.uiip.digitalgarage.roboadvice.persistence.model.DAOException;
 

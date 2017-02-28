@@ -1,4 +1,4 @@
-package it.uiip.digitalgarage.roboadvice.model;
+package it.uiip.digitalgarage.roboadvice.logic.model;
 
 public class User {
 	
