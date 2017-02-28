@@ -1,8 +1,5 @@
 package it.uiip.digitalgarage.roboadvice.logic.model;
 
-/**
- * Created by Luca on 28/02/2017.
- */
 public class AssetClass {
 
     private Long id;

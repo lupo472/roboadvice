@@ -2,9 +2,6 @@ package it.uiip.digitalgarage.roboadvice.logic.model;
 
 import java.math.BigDecimal;
 
-/**
- * Created by Luca on 28/02/2017.
- */
 public class FinancialData {
 
     private Long id;
